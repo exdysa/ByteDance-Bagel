@@ -1,3 +1,7 @@
+[build-system]
+requires      = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "bytedance-bagel"
 version = "0.1.0"
@@ -30,6 +34,9 @@ dependencies = [
     "wandb>=0.20.1",
     "wheel>=0.45.1",
 ]
+
+[tool.setuptools]
+packages = ["assets", "data", "modeling", "eval", "scripts", "train"]
 
 [tool.uv.sources]
 sentencepiece = { git = "https://github.com/google/sentencepiece.git", subdirectory = "python" }
