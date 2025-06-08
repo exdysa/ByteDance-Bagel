@@ -1,0 +1,35 @@
+[project]
+name = "bytedance-bagel"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "accelerate>=1.7.0",
+    "bitsandbytes>=0.46.0 ; sys_platform != 'darwin'",
+    "decord>=0.6.0 ; sys_platform != 'darwin'",
+    "einops>=0.8.1",
+    "gradio>=5.33.0",
+    "huggingface-hub>=0.32.4",
+    "matplotlib>=3.10.3",
+    "ninja>=1.11.1.4",
+    "numpy>=2.3.0",
+    "opencv-python>=4.11.0.86",
+    "pyarrow>=20.0.0",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.3",
+    "safetensors>=0.5.3",
+    "scipy>=1.15.3",
+    "sentencepiece",
+    "setuptools>=80.9.0",
+    "torch>=2.7.1",
+    "torchvision>=0.22.1",
+    "transformers>=4.52.4",
+    "triton>=3.3.1 ; sys_platform == 'Linux'",
+    "triton-windows>=3.3.1.post19 ; sys_platform == 'Linux'",
+    "wandb>=0.20.1",
+    "wheel>=0.45.1",
+]
+
+[tool.uv.sources]
+sentencepiece = { git = "https://github.com/google/sentencepiece.git", subdirectory = "python" }
